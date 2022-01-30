@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    margin: 30px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    background: linear-gradient(to right, rgb(229, 93, 135), rgb(95, 195, 228));
+    
+}
+.slider{
+    width: 900px;
+    margin: 50 auto;
+    position: relative;
+    margin: 20px;
+}
+.slider .image{
+    width: 100%;
+    height:100%;
+}
+.slider .image img{
+    width:100%;
+    border-radius: 12px;
+    animation: focus 2s forwards;
+}
+@keyframes focus{
+    0%{
+        transform: scale(1.5);
+        
+    }
+    100%{
+        transform: scale(1);
+        
+    }
+    
+}
+.image{
+    display: none;
+}
+.image.active{
+    display: block;
+}
+.section{
+    width: 800px;
+}
+.section.text{
+    width: 100%;
+    height: 100%;
+}
+.section.text img{
+    width: 100%;
+}
+.text{
+    display: none;
+    color: honeydew;
+}
+p{
+    color: black;
+}
+.text.active{
+    display: block;
+}
+.controller{
+    position: absolute;
+    top:45%;
+    left:0px;
+    right: 5px;
+    bottom: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 8%;
+}
+.controller .next,
+.controller .previous{
+    cursor: pointer;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 5px;
+    border-radius:50%;
+    background-color: gray;
+}
+@media screen and (max-width:900px){
+    body{
+        
+    }
+}
